@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   class HocVin {
+       name;
+       score;
+       constructor(hv,dv) {
+           this.name=hv;
+           this.score=dv;
+       }
+       lamBai(){
+           this.score+=2
+       }
+       note(){
+           this.score+=1
+       }
+       choDiem(a,b){
+           a.score=a.score+b
+           this.score-=b
+       }
+   }
+   let MTP=new HocVin('MTP',10)
+   let MTP2=new HocVin('ST',10)
+   MTP.note()
+   MTP.lamBai()
+   MTP2.choDiem(MTP,5)
+   document.write(MTP.score+'<br>')
+   document.write(MTP2.score)
+
+</script>
+</body>
+</html>
