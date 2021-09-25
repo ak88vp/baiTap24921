@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Mobile {
+        name;
+        pin;
+        saveM;
+        saveI;
+        saveS;
+
+        constructor(name, message, inbox, sent) {
+            this.name = name;
+            this.pin = 100;
+            this.saveM = message;
+            this.saveI = inbox;
+            this.saveS = sent;
+        }
+
+        checkToggle() {
+            if (this.turnO() == 'ON') {
+                return 'điện thoại đang bật'
+            } else return 'điện thoại đang tắt'
+        }
+
+        turnO(O) {
+            if (O = 'ON') {
+                return 'ON'
+
+            } else return 'OF'
+        }
+
+        charge(a) {
+            this.pin += a
+
+        }
+
+        texting(ib) {
+            return this.saveM = ib
+
+
+        }
+
+        receiveM(inbox) {
+           return  this.saveI = inbox
+
+        }
+
+        send(guiDen) {
+           guiDen.saveI=this.saveM
+        }
+
+        seeMII() {
+            return this.receiveM()
+        }
+
+        seeSM() {
+            return this.send()
+        }
+
+        reducePin(s) {
+            this.pin-=1
+
+        }
+
+        work() {
+            if (this.turnO()=='ON'){
+                return 'đã thực hiện các chức năng'
+            }else return 'các chức năng chưa đc thực hiện vui lòng bật điện thoại'
+
+        }
+
+
+    }
+
+    let nokia = new Mobile('NOKIA',)
+    let iphone = new Mobile('Iphone',)
+    nokia.turnO('ON')
+    iphone.turnO('ON')
+    iphone.charge(5)
+
+
+    document.write('điện thoại nokia soạn tin nhắn là '+nokia.texting('em đang ở đâu đấy em')+'<br>'+'điện thoại iphone hộp thư gửi đến có nội dung là '+iphone.receiveM('em đang ở đâu đấy em')  )
+
+</script>
+</body>
+</html>

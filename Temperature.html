@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        degrees;
+        constructor(d) {
+            this.degrees=d
+        }
+        convertF(){
+            return 9/5*this.degrees+32
+        }
+        convertK(){
+            return this.degrees +273.15
+        }
+        display(){
+            document.write('25 độ C bằng '+this.convertF()+' độ F'+'<br>'+this.convertK()+' kenvin')
+        }
+    }
+    let tem= new Temperature(25)
+    tem.display()
+
+</script>
+</body>
+</html>
