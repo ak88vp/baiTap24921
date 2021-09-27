@@ -5,6 +5,7 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="myCanvas" height="500" width="500"></canvas>
 <script>
    class Circle {
        darius;
@@ -20,8 +21,13 @@
        return Math.PI * this.darius*this.darius
    }
    }
-   let circle = new Circle(2);
+   let bk=+prompt('nhập đường kình hình tròn')
+   let circle = new Circle(bk);
    let radius = circle.circle();
+   let canvas=document.getElementById('myCanvas')
+   ctx=canvas.getContext('2d')
+   ctx.arc(100,100,bk,0,2*Math.PI)
+   ctx.fill()
 
    let area = circle.getArea()
    alert("radius: " + radius + "; area: " + area);
